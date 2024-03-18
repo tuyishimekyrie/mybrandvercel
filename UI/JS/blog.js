@@ -284,12 +284,13 @@ window.onload = function () {
 
           // Iterate over all comments and create DOM elements for each comment
           comments.forEach((comment) => {
+            console.log(comment)
             const commentedDiv = document.createElement("div");
             commentedDiv.classList.add("commented");
             const commenterDiv = document.createElement("div");
             commenterDiv.classList.add("img");
             const commenterImg = document.createElement("img");
-            commenterImg.src = "../assests/avatar.png";
+            commenterImg.src = comment.photo ||  "../assests/avatar.png";
             const commenterName = document.createElement("p");
             commenterName.textContent = comment.commenterName;
             commenterDiv.appendChild(commenterImg);
