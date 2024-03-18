@@ -51,6 +51,7 @@ form div input::placeholder {
 form div textarea {
   padding: 1.25rem .2rem;
   outline: none
+  color: white;
 }
 form div textarea::placeholder {
   font-weight: 400;

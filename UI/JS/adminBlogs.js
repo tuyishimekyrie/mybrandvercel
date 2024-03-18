@@ -340,8 +340,8 @@ function renderBlog(blog) {
   var closeModal = document.querySelector(".close");
   const errorMessages = document.querySelector(".errorMessages");
   const UpdateImageInput = document.getElementById("images");
-          const UpdateTitleInput = document.getElementById("titles");
-          const UpdateDescInput = document.getElementById("descriptions");
+  const UpdateTitleInput = document.getElementById("titles");
+  const UpdateDescInput = document.getElementById("descriptions");
   // Add event listeners for update and delete buttons (similar to your existing code)
   const submitBtn = document.querySelector(".submitBtn");
   updateBtn.addEventListener("click", function () {
@@ -351,7 +351,11 @@ function renderBlog(blog) {
     submitBtn.addEventListener("click", (e) => {
       e.preventDefault();
       var file = UpdateImageInput.files[0];
-      if (UpdateTitleInput.value === "" || UpdateTitleInput.value == null || UpdateTitleInput !== "") {
+      if (
+        UpdateTitleInput.value === "" ||
+        UpdateTitleInput.value == null ||
+        UpdateTitleInput !== ""
+      ) {
         // Get the image file selected by the user
         // var file = imageInput.files[0];
         console.log(file);
@@ -364,14 +368,14 @@ function renderBlog(blog) {
             desc: UpdateDescInput.value.trim(),
             image: file, // Include the file name
           };
-const headerUpdate =
-  UpdateTitleInput.value.trim() !== ""
-    ? UpdateTitleInput.value.trim()
-    : blog.header;
-const descUpdate =
-  UpdateDescInput.value.trim() !== ""
-    ? UpdateDescInput.value.trim()
-    : blog.desc;
+          const headerUpdate =
+            UpdateTitleInput.value.trim() !== ""
+              ? UpdateTitleInput.value.trim()
+              : blog.header;
+          const descUpdate =
+            UpdateDescInput.value.trim() !== ""
+              ? UpdateDescInput.value.trim()
+              : blog.desc;
           const formData = new FormData();
           formData.append("image", UpdateImageInput.files[0]); // Assuming imageInput is an input field of type file
           formData.append("header", headerUpdate);
@@ -404,6 +408,7 @@ const descUpdate =
               UpdateTitleInput.value = "";
               UpdateDescInput.value = "";
               // You may optionally update the UI here
+               updateModal.classList.remove("active");
             })
             .catch((error) => {
               // Handle errors
