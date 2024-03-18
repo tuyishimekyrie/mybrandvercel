@@ -42,7 +42,8 @@ registerWithGoogle.addEventListener("click", async (e) => {
   console.log("Clicked");
 
   // Redirect the user to the Google authentication URL
-  window.location.href = "http://localhost:3000/googleregister";
+  window.location.href =
+    "https://mybrandbackend-q8gq.onrender.com/googleregister";
 
   // After the user is redirected back to your callback URL, extract the token from the URL
   const urlParams = new URLSearchParams(window.location.search);
@@ -51,7 +52,7 @@ registerWithGoogle.addEventListener("click", async (e) => {
   // If a code parameter is present in the URL, it means the user has been authenticated and redirected back
  if (code) {
    // If a code is present, send it to your backend
-   fetch("http://localhost:3000/exchangeCodeForToken", {
+   fetch("https://mybrandbackend-q8gq.onrender.com/exchangeCodeForToken", {
      method: "POST",
      headers: {
        "Content-Type": "application/json",
