@@ -231,6 +231,7 @@ window.onload = function () {
 
               if (response.ok) {
                 console.log("Comment added successfully:", data);
+                 commentInput.value = ""
               } else {
                 console.error("Failed to add comment:", data.message);
               }

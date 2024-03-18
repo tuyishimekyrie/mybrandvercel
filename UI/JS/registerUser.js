@@ -10,8 +10,24 @@ const registerWithGoogle = document.querySelector(".registerGoogle")
 
 
 window.addEventListener("load", async function () {
+  // Parse the URL to extract the token
+  const urlParams = new URLSearchParams(window.location.search);
+  const tokens = urlParams.get("token");
+   const userToken = localStorage.getItem("token");
+  console.log(tokens)
   const token = localStorage.getItem("token");
-
+  const tokenAdmin = localStorage.getItem("token-admin");
+  if (tokens) {
+    const tokenGoogle = localStorage.setItem("token", tokens);
+    window.location.href = "../../index.html";
+  }
+ if (userToken || token) {
+   window.location.href = "../../index.html";
+ }
+   if (tokenAdmin) {
+     // Admin is logged in, redirect to admin dashboard
+     window.location.href = "../pages/HomeDashboard.html";
+   }
   if (token) {
     window.location.href = "../../index.html";
     logoutButtons.textContent = "logout";
@@ -21,42 +37,43 @@ window.addEventListener("load", async function () {
 });
 
 
-registerWithGoogle.addEventListener("click",async (e) => {
-  e.preventDefault()
-  console.log("Clcked")
-    try {
-      const response = await fetch("http://localhost:3000/googleregister", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        // body: JSON.stringify(userData),
-      });
+registerWithGoogle.addEventListener("click", async (e) => {
+  e.preventDefault();
+  console.log("Clicked");
 
-      console.log(response)
+  // Redirect the user to the Google authentication URL
+  window.location.href = "http://localhost:3000/googleregister";
 
-      // if (!response.ok) {
-      //   // const errorMessage = await response.text();
-      //   // console.error(errorMessage);
-      //   response.text().then((errorMessage) => {
-      //     console.log("Error message:", errorMessage);
-      //     // Assuming messagesCont is a DOM element to display error messages
-      //     errorMessageCont.innerHTML = errorMessage;
-      //     errorMessageCont.style.color = "#FF0000";
-      //     setTimeout(function () {
-      //       errorMessageCont.innerHTML = "";
-      //     }, 3000);
-      //   });
-      // }
-      // if (response.status == 201) {
-      //       setTimeout(function () {
-      //         window.location.href = "../pages/login.html";
-      //       }, 500);
-      // }
-    } catch (error) {
-      console.log(error);
-    }
-})
+  // After the user is redirected back to your callback URL, extract the token from the URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const code = urlParams.get("code");
+
+  // If a code parameter is present in the URL, it means the user has been authenticated and redirected back
+ if (code) {
+   // If a code is present, send it to your backend
+   fetch("http://localhost:3000/exchangeCodeForToken", {
+     method: "POST",
+     headers: {
+       "Content-Type": "application/json",
+     },
+     body: JSON.stringify({ code }),
+   })
+     .then((response) => response.json())
+     .then((data) => {
+       const { token } = data;
+       if (token) {
+         // Redirect the user to the login page with the token as a query parameter
+         window.location.href = `../pages/login.html`;
+       } else {
+         console.error("Token not received");
+       }
+     })
+     .catch((error) => {
+       console.error("Error exchanging code for token:", error);
+     });
+ }
+});
+
 
 
 // window.addEventListener("load", function () {

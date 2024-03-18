@@ -146,6 +146,7 @@ logoutBtn.addEventListener("click", () => {
 
   // Redirect to the login page
   // window.location.href = "./UI/pages/login.html";
+  window.location.href = "../../index.html";
 
   console.log("clicked");
 });
@@ -155,7 +156,7 @@ logoutBtns.addEventListener("click", () => {
   // localStorage.removeItem("isAdmin");
 
   // Redirect to the login page
-  window.location.href = "./login.html";
+  window.location.href = "../../index.html";
 
   console.log("clicked");
 });

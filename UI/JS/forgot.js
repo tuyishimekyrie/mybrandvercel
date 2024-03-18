@@ -5,6 +5,29 @@ const cpasswordInput = document.getElementById("confirm-password");
 const buttonSignIn = document.querySelector(".button");
 const message = document.querySelector(".message");
 
+
+window.addEventListener("load", async () => {
+  // Parse the URL to extract the token
+  const urlParams = new URLSearchParams(window.location.search);
+  const tokens = urlParams.get("token");
+  console.log(tokens);
+  const token = localStorage.getItem("token-admin");
+  const userToken = localStorage.getItem("token");
+  if (tokens) {
+    const tokenGoogle = localStorage.setItem("token-admin", tokens);
+  }
+  // const isAdmin = localStorage.getItem("isAdmin");
+  if (userToken) {
+    window.location.href = "../../index.html";
+  }
+  if (token) {
+    // Admin is logged in, redirect to admin dashboard
+    window.location.href = "../pages/HomeDashboard.html";
+  }
+});
+
+
+
 buttonSignIn.addEventListener(
   "click",
   (e) => {
