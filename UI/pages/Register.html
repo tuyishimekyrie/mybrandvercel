@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Page | Portfolio Webstite</title>
+    <link rel="stylesheet" href="../css/sections/register.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="container-quote">
+        <div class="line">
+          <h1>A wise Quote</h1>
+          <!-- <img src="../assests/Line 8.png" alt=""> -->
+        </div>
+        <div>
+          <h1>Get Everything You Want</h1>
+          <p>
+            You can get anything you want , if you work hard. Trust the process
+            , and stick to the plan
+          </p>
+        </div>
+      </div>
+      <div class="container-register">
+        <h1>Sign Up</h1>
+        <form class="formRegister">
+          <div class="inputs">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your Email"
+              
+    
+            />
+          </div>
+          <div class="inputs">
+            <label for="names">Names</label>
+            <input
+              type="text"
+              name="names"
+              id="names"
+              placeholder="Enter your Names"
+            />
+          </div>
+          <div class="inputs">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Enter your password"
+            />
+          </div>
+          <div class="inputs">
+            <label for="confirm-password">confirm-password</label>
+            <input
+              type="password"
+              name="confirm-password"
+              id="confirm-password"
+              placeholder="Enter your password"
+            />
+          </div>
+          <div class="error"></div>
+          <div class="btns">
+           <a href="" class="button">Sign Up</a>
+            <button class="registerGoogle">
+              <img src="../assests/Google.png" alt="" />
+              Sign Up with Google
+            </button>
+          </div>
+        </form>
+        <p>Already have an account? <a  class="reg" href="./login.html"><span>Sign in</span></a></p>
+      </div>
+    </div>
+
+    <script src="../JS/registerUser.js"></script>
+  </body>
+</html>

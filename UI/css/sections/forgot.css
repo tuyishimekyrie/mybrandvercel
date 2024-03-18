@@ -1,0 +1,26 @@
+.forgot {
+    background: none;
+    border: none;
+    padding: .5rem 0;
+    text-align: right
+}
+.container-register h1{
+    padding: 2vh 0;
+}
+form {
+    margin: 5vh 0;
+}
+a {
+    background: none;
+    color: #033AFF;
+}
+.button {
+    background-color: #000000;
+    border: none;
+    border-radius: .2rem;
+    padding: .85rem .25rem;
+    text-align: center;
+    color: white;
+    list-style:none;
+    text-decoration: none
+}

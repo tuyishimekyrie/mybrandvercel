@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Dashboard | Admin</title>
+    <link rel="stylesheet" href="../css/sections/dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar ">
+           <div class="mobile-nav">
+              <img src="../assests/Multiply.png" alt="">
+              </div>
+            <div class="logo">
+                <img src="../assests/logo.png" alt="">
+            </div>
+            <div class="links ">
+               <a href="./HomeDashboard.html" class="link active">
+                    <img src="../assests/layout-dashboard.png" alt="">
+                    <p>Dashboard</p>
+               </a>
+                <a href="./UserPage.html" class="link ">
+                    <img src="../assests/Member.png" alt="">
+                    <p>Users</p>
+                </a>
+                 <a href="./EmailsPage.html" class="link">
+                    <img src="../assests/Letter.png" alt="">
+                    <p>Emails</p>
+                 </a>
+                 <a href="./ProjectsPage.html" class="link">
+                    <img src="../assests/Outline.png" alt="">
+                    <p>Projects</p>
+                 </a>
+                 <a href="./BlogsPage.html" class="link">
+                    <img src="../assests/Page.png" alt="">
+                    <p>Blogs</p>
+                 </a>
+                 <a href="./login.html" class="link logout">
+                    <img src="../assests/Logout Rounded.png" alt="">
+                    <p>Logout</p>
+                 </a>
+               
+            </div>
+            <div class="logger">
+                <img src="../assests/ctn.png" alt="">
+                <p><span>0</span>Risk, all systems are operational</p>
+
+            </div>
+           
+        </div>
+        <div class="main">
+            <div class="header">
+                <div class="info">
+                    <p>tuyishimehope01@gmail.com</p>
+                    <h3>Tuyishime Hope</h3>
+                </div>
+                <div class="user">
+                    <img src="../assests/Doorbell.png" alt="">
+                    <img src="../assests/A-removebg-preview.png" alt="" class="img">
+                    <a  class="logouts">Logout</a>
+                    <div class="link menu" logout="logout">
+                       <button class="menu"><img src="../assests/Menu.png" alt=""></button>
+                   </div>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card user">
+                    <div class="row1">
+                        <div>
+                            <img src="../assests/Padlock.png" alt="">
+                            <p>Users</p>
+                        </div>
+                        <div>
+
+                            <img src="../assests/Ellipsis.png" alt="">
+                        </div>
+                        </div>
+                        <div class="row2">
+                            <p ></p>
+                            <a href="./UserPage.html">View All</a>
+                        </div>
+                    </div>
+                    <div class="card user">
+                    <div class="row1">
+                        <div>
+                            <img src="../assests/Email.png" alt="">
+                            <p>Emails</p>
+                        </div>
+                        <div>
+
+                            <img src="../assests/Ellipsis.png" alt="">
+                        </div>
+                        </div>
+                        <div class="row2 ">
+                            <p class="cEmail"></p>
+                              <a href="./EmailsPage.html">View All</a>
+                        </div>
+                    </div>
+                    <div class="card user">
+                    <div class="row1">
+                        <div>
+                            <img src="../assests/Project.png" alt="">
+                            <p>Projects</p>
+                        </div>
+                        <div>
+
+                            <img src="../assests/Ellipsis.png" alt="">
+                        </div>
+                        </div>
+                        <div class="row2">
+                            <p>50</p>
+                              <a href="./ProjectsPage.html">View All</a>
+                        </div>
+                    </div>
+                </div>
+                 <div id="curve_chart" style="height: 65vh; width: 80vw;"></div>
+                 <div class="mobile">
+                    <h2>Income</h2>
+                    <p>10,000,000 RWF</p>
+                    <span>2-05-2024</span>
+                 </div>
+            </div>
+        </div>
+    </div>
+     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+       var data = google.visualization.arrayToDataTable([
+  ['Month', 'Income', 'Emails'],
+  ['Jan',  500,      400],
+  ['Feb',  700,      460],
+  ['Mar',  900,      520],
+  ['Apr',  1100,     540],
+  ['May',  1300,     560],
+  ['Jun',  1500,     580],
+  ['Jul',  1700,     600],
+  ['Aug',  1900,     620],
+  ['Sep',  2100,     640],
+  ['Oct',  2300,     660],
+  ['Nov',  2500,     680],
+  ['Dec',  2700,     700]
+]);
+
+        var options = {
+      title: 'Income',
+      curveType: 'function',
+      legend: { 
+        position: 'bottom',
+        textStyle: {
+          fontName: 'Outffit',
+          fontSize: 18,
+          color: 'white',
+          opacity: 0.8
+        }
+      },
+      backgroundColor: "#0E1227",
+      titleTextStyle: {
+        color: 'white',
+        fontSize: 24,
+        fontName: 'Outffit',
+        bold: true
+      },
+      hAxis: {
+        textStyle: {
+          color: 'white',
+          fontSize: 14,
+          fontName: 'Outffit'
+        }
+      },
+      vAxis: {
+        textStyle: {
+          color: 'white',
+          fontSize: 14,
+          fontName: 'Outffit'
+        }
+      },
+ 
+      series: {
+        0: { // First data series
+          color: '8244FF' // Custom color for the first data series
+        },
+        1: { // Second data series
+          color: '5887FF' // Custom color for the second data series
+        }
+        // Add more series customization as needed
+      },
+      width: '80vw', // Set the width of the chart to '80vw'
+      height: '70vh', 
+    };
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+    <script src="../JS/dashboardsidebar.js"></script>
+</body>
+</html>

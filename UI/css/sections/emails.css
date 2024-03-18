@@ -1,0 +1,106 @@
+.emails {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem 2rem;
+}
+.email {
+  background-color: rgb(217, 217, 217, 0.05);
+  padding: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.email:hover {
+  cursor: pointer;
+  background-color: rgb(38, 38, 80, 0.58);
+}
+.emails .email-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.emails .email-header span,
+p {
+  color: rgb(255, 255, 255, 0.5);
+}
+.emails .email-message p {
+  color: white;
+  font-size: 1.25rem;
+}
+.emails .email-buttons {
+  display: flex;
+  gap: 2rem;
+}
+.emails .email-buttons button {
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0.65rem 1.5rem;
+  color: #0cb6ff;
+}
+.emails .email-buttons button:last-child {
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0.65rem 1.5rem;
+  color: #0cb6ff;
+  background: none;
+  border: 1px solid rgb(255, 255, 255, 0.5);
+}
+.emails .email-buttons .reply:hover{
+  cursor: pointer;
+  background-color: rgb(255,255,255, 0.8);
+
+}
+.emails .email-buttons .markasread:hover{
+  cursor: pointer;
+  background-color: rgb(255,255,255, 0.8);
+
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    min-height: 100vh;
+    background: #0e1227;
+  }
+  .emails p {
+    color: white;
+    font-size: 1.25vw;
+  }
+  .emails .email-message p {
+    color: white;
+    font-size: 2vw;
+  }
+  .emails .email-buttons button {
+    border-radius: 0.5rem;
+    border: none;
+    padding: 0.45rem 1.25rem;
+    color: #0cb6ff;
+  }
+}
+
+@media only screen and (max-width: 468px) {
+  .container {
+    height: 100vh;
+    background: #0e1227;
+  }
+  .emails {
+    margin: 0;
+    padding:.85rem 0.85rem;
+  }
+  .email {
+    width:100%
+  }
+  .emails p {
+    color: white;
+    font-size: 2.5vw;
+  }
+  .emails .email-message p {
+    color: white;
+    font-size: 2.5vw;
+  }
+  .emails .email-buttons button {
+    border-radius: 0.5rem;
+    border: none;
+    padding: 0.25rem 1rem;
+    color: #0cb6ff;
+  }
+}

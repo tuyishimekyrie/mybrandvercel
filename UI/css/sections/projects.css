@@ -1,0 +1,54 @@
+.project-message span {
+  color: #5887ff;
+  font-size: 1.2vw;
+}
+
+.project-message h4 {
+  padding-top: 1.5rem;
+  color: #fff;
+  font-size: 1vw;
+}
+.markBtn {
+  color: red;
+  cursor: pointer; /
+}
+
+.project-button .markBtn:hover {
+  background: #1e293b; 
+}
+
+@media only screen and (max-width: 768px) {
+  .project-message span {
+  color: #5887ff;
+  font-size:2vw;
+}
+
+.project-message h4 {
+  padding-top: 1.5rem;
+  color: #fff;
+  font-size: 2vw;
+  font-weight: 400
+}
+.project-button button {
+  padding: .25rem;
+}
+}
+
+@media only screen and (max-width: 468px) {
+  .project-message span {
+  color: #5887ff;
+  font-size:2vw;
+}
+.email-header span {
+  font-size: 4vw
+}
+.email-header {
+  align-items:center;
+}
+  .project-message span {
+    font-size:1.15rem; 
+  }
+  .project-message h4 {
+    font-size:.85rem; 
+  }
+}

@@ -1,0 +1,607 @@
+* {
+  font-family: 'outfit'
+}
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 2rem 4rem;
+  gap: 2rem;
+}
+.hero-image img {
+  width: 40vw;
+  object-fit: cover;
+}
+.hero-content {
+  padding: 4rem 0 0 0.5rem;
+}
+.hero-content h1 {
+  font-size: 3.4vw;
+}
+.hero-content h1,
+h4 {
+  font-family: "Outfit", sans-serif;
+}
+.hero-content span {
+  color: #16f8b6;
+  font-family: "outfit";
+}
+.hero-content h4 {
+  padding: 1rem 0 0 0;
+  color: rgb(255, 255, 255, 0.9);
+  font-weight: 400;
+  font-size: 1.35vw;
+}
+.bookCall {
+  background-color: rgb(130,68,255,.3);
+  color: #ffff;
+  padding: 0.8rem 2rem;
+  border-radius: 5rem;
+  border: none;
+  margin: 1.5rem 0 0 0vw;
+}
+.bookCall:hover{
+  cursor: pointer;
+   background-color: rgb(130,68,255,.9);
+}
+.my-names {
+  padding: 3rem 0;
+  text-align: center;
+}
+.my-names p {
+  color: #9e7cff;
+}
+.my-names h4 {
+  padding: 0.5rem 0;
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-image img {
+    width: 50vw;
+    object-fit: cover;
+  }
+  .hero-content h4 {
+    padding: 1rem 0 0 0;
+    color: rgb(255, 255, 255, 0.9);
+    font-weight: 400;
+    font-size: 2.35vw;
+  }
+  .bookCall {
+  background-color: rgb(130,68,255,.3);
+  color: #ffff;
+  padding: 0.8rem 2rem;
+  border-radius: 5rem;
+  border: none;
+  font-size: .65rem;
+  margin: 1.5rem 0 0 0vw;
+}
+}
+@media only screen and (max-width: 768px) {
+  .hero-content {
+    /* margin: 0; */
+    padding: 1rem  1rem 0rem 2rem
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    /* padding: 0; */
+  }
+  .hero-image{
+    padding: 0  1rem 0 2rem;
+  }
+  .hero-image img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .hero-content h1 {
+    /* padding: 1rem 0 0 0; */
+    /* color: rgb(255, 255, 255, 0.9); */
+    /* font-weight: 400; */
+    font-size: 5vw;
+  }
+  .hero-content h4 {
+    padding: 1rem 0 0 0;
+    color: rgb(255, 255, 255, 0.9);
+    font-weight: 400;
+    font-size: 3.5vw;
+  }
+}
+
+@media only screen and (max-width: 468px) {
+  .my-names {
+    padding: 2.5rem 2rem;
+  }
+}
+
+/* ABout section styles */
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5rem;
+  gap: 5vw;
+  margin: 2rem 0;
+}
+.about-content p {
+  text-align: start;
+  letter-spacing: 1px; /* Adjust the letter spacing as needed */
+  line-height: 1.5; /* Adjust the line height as needed */
+}
+
+.about img {
+  margin-top: 5vh;
+  /* height: 40vh; */
+  /* width: 40vw; */
+  object-fit: cover;
+}
+@media only screen and (max-width: 900px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+    margin: 18rem 0 0 0;
+  }
+  .about img {
+    margin-left: 0vw;
+    height: 40vh;
+    width: 70vw;
+    object-fit: cover;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .about {
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    margin: 28em 0 4rem 0;
+  }
+  .about img {
+    margin: 0;
+    /* height: 40vh; */
+    width: 50vw;
+    object-fit: cover;
+  }
+}
+@media only screen and (max-width: 468px) {
+  .about {
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    margin: 4rem 0 4rem 0;
+  }
+  .about img {
+    margin: 0;
+    /* height: 40vh; */
+    width: 80vw;
+    object-fit: cover;
+  }
+}
+
+.skills {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* padding: 1rem; */
+  position: relative;
+}
+
+.skills h3 {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.skills::after {
+  content: ""; /* Add content property for pseudo-elements */
+  background-image: url("../../assests/Ellipse 1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30rem;
+  height: 5rem;
+  position: absolute;
+  /* top: -9rem; */
+  right: 32vw;
+  z-index: -1;
+}
+.skills img {
+  margin: 2rem 0;
+  width: 60vw;
+}
+@media only screen and (max-width: 768px) {
+  .skills h3 {
+    font-size: 1.5rem;
+    /* padding: 1rem; */
+  }
+  .skills p {
+    font-size: 1.25rem;
+  }
+  .skills::after {
+    content: ""; /* Add content property for pseudo-elements */
+    background-image: url("../../assests/Ellipse 1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 80vw;
+    height: 5rem;
+    position: absolute;
+    /* top: -9rem; */
+    right: 12vw;
+    z-index: -1;
+  }
+  .skills img {
+    padding: 2rem 0;
+    width: 75vw;
+  }
+}
+@media only screen and (max-width: 468px) {
+  .skills h3 {
+    font-size: 1.5rem;
+    /* padding: 1rem; */
+  }
+  .skills p {
+    font-size: 1.25rem;
+  }
+  .skills::after {
+    content: ""; /* Add content property for pseudo-elements */
+    background-image: url("../../assests/Ellipse 1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 85vw;
+    height: 5rem;
+    position: absolute;
+    /* top: -9rem; */
+    right:12vw;
+    z-index: -1;
+  }
+  .skills img {
+    padding: 2rem 0;
+    width: 80vw;
+  }
+}
+
+
+/* Platforms section styles */
+.platforms {
+  padding: 2rem 4rem;
+  position: relative;
+}
+.platforms h3,
+p {
+  text-align: center;
+  padding: 1rem 0 0 0;
+}
+.platforms::before {
+  content: ""; /* Add content property for pseudo-elements */
+  background-image: url("../../assests/Ellipse 1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 28rem;
+  height: 5rem;
+  position: absolute;
+  /* top: 0rem; */
+  right: 32vw;
+  z-index: -1;
+}
+.platform-content {
+  display: flex;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 0 0 0;
+}
+.platform-content .application img {
+  width: 12vw;
+  margin-left: 5vw;
+}
+.application h2 {
+  padding: 1rem 0;
+}
+.application h5 {
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 768px) {
+  .platforms::before {
+    content: ""; /* Add content property for pseudo-elements */
+    background-image: url("../../assests/Ellipse 1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 28rem;
+    height: 6rem;
+    position: absolute;
+    /* top: 0rem; */
+    right: 20vw;
+    z-index: -1;
+  }
+  .platform-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    padding: 4rem 0 0 0;
+  }
+}
+@media only screen and (max-width: 468px) {
+  .platforms::before {
+    content: ""; /* Add content property for pseudo-elements */
+    background-image: url("../../assests/Ellipse 1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 25rem;
+    height: 5rem;
+    position: absolute;
+    /* top: 0rem; */
+    right: 5vw;
+    z-index: -1;
+  }
+  .platform-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    padding: 4rem 0 0 0;
+  }
+}
+
+/* projects section styles */
+.projects {
+  padding: 2rem 4rem;
+  position: relative;
+}
+.projects h3,
+p {
+  text-align: center;
+  padding: 1rem 0 0 0;
+}
+.projects::before {
+  content: ""; /* Add content property for pseudo-elements */
+  background-image: url("../../assests/Ellipse 1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 28rem;
+  height: 8rem;
+  position: absolute;
+  /* top: 0rem; */
+  right: 32vw;
+  z-index: -1;
+}
+.projects-content {
+  display: flex;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 0 0 0;
+}
+.projects-content .project img {
+  width: 40vw;
+  /* height: 12rem; */
+  object-fit: cover;
+}
+.project h2 {
+  padding: 1rem 0;
+}
+.project h5 {
+  font-weight: 400;
+  padding: 0 0 1rem 0;
+  margin-bottom: 1.2rem
+}
+ .site {
+  background-color: #5887ff;
+  color: #ffff;
+  padding: 0.85rem 2rem;
+  border-radius: 5rem;
+  border: none;
+}
+.projects .see-more {
+  background-color: #8244ff;
+  color: #ffff;
+  padding: 0.85rem 2rem;
+  border-radius: 5rem;
+  border: none;
+  margin: 4rem 0 0 38.5vw;
+}
+@media only screen and (max-width: 768px) {
+  .project h2 {
+    padding: 1rem 0;
+    font-size: 1.25rem;
+  }
+  .project h5 {
+    font-size: 0.85rem;
+    font-weight: 400;
+    padding: 0 0 1rem 0;
+  }
+  .projects::before {
+    content: ""; /* Add content property for pseudo-elements */
+    background-image: url("../../assests/Ellipse 1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30rem;
+    height: 10rem;
+    position: absolute;
+    /* top: 0rem; */
+    right: 8vw;
+    z-index: -1;
+  }
+  .projects-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0rem 0rem 0;
+  }
+  .project .site {
+    background-color: #5887ff;
+    color: #ffff;
+    padding: 0.5rem 1.2rem;
+    border-radius: 5rem;
+    border: none;
+    margin-top: 1.2rem
+  }
+  .projects .see-more {
+    background-color: #8244ff;
+    color: #ffff;
+    padding: 0.5rem 1.2rem;
+    border-radius: 5rem;
+    border: none;
+    margin: 5rem 0 0 30vw;
+  }
+}
+
+/* testimonials section styles */
+.testimonials {
+  padding: 4rem;
+  position: relative;
+}
+.testimonials h3,
+p {
+  text-align: center;
+  padding: 1rem 0 0 0;
+}
+.testimonials::before {
+  content: ""; /* Add content property for pseudo-elements */
+  background-image: url("../../assests/Ellipse 1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 25rem;
+  height: 5rem;
+  position: absolute;
+  /* top: 0rem; */
+  right: 34.5vw;
+  z-index: -1;
+}
+.testimonials-content {
+  display: flex;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 0 0 0;
+}
+.testimonial {
+  border: 1px solid rgb(255, 255, 255, 0.6);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.testimonial h5 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding: 0 0 0.5rem 0;
+}
+.testimonial p {
+  text-align: start;
+  color: rgb(255, 255, 255, 0.6);
+}
+.client {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem 0 0 0;
+}
+.client img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 5rem;
+  object-fit: fill;
+}
+
+.client h5 {
+  font-weight: 400;
+  font-size: 1rem;
+}
+.client p {
+  font-weight: 400;
+  color: rgb(255, 255, 255, 0.8);
+}
+@media only screen and (max-width: 768px) {
+  .testimonials::before {
+    content: ""; /* Add content property for pseudo-elements */
+    background-image: url("../../assests/Ellipse 1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30rem;
+    height: 10rem;
+    position: absolute;
+    /* top: 0rem; */
+    right: 10vw;
+    z-index: -1;
+  }
+  .testimonials-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem 0 0 0;
+  }
+  .testimonial h5 {
+    font-size: 1rem;
+    font-weight: 200;
+  }
+  .client h5 {
+    font-weight: 200;
+    font-size: 0.85rem;
+  }
+  .client p {
+    font-weight: 300;
+    color: rgb(255, 255, 255, 0.8);
+  }
+}
+@media only screen and (max-width: 468px) {
+  .testimonials::before {
+    content: ""; /* Add content property for pseudo-elements */
+    background-image: url("../../assests/Ellipse 1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 25rem;
+    height: 5rem;
+    position: absolute;
+    /* top: 0rem; */
+    right: 5vw;
+    z-index: -1;
+  }
+  .testimonials-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem 0 0 0;
+  }
+  .testimonial h5 {
+    font-size: .85rem;
+    font-weight: 200;
+  }
+  .client h5 {
+    font-weight: 200;
+    font-size: 0.65rem;
+  }
+  .client p {
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: rgb(255, 255, 255, 0.8);
+  }
+}

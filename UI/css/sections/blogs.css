@@ -1,0 +1,86 @@
+.head h2 {
+  text-align:center;
+  padding: 2rem   1.5rem;
+}
+.blogs {
+  padding: 2rem 4.25rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.blog {
+  border: 1px solid rgb(255, 255, 255, 0.5);
+  /* z-index:-10; */
+  border-radius: 1rem;
+  width: 380px;
+  /* height: 450px; */
+  overflow: hidden;
+  position: relative;
+}
+
+
+.blog .img {
+  width: 380px;
+  height: 200px;
+  object-fit:cover;
+}
+.blog h2 {
+  padding: 1rem;
+}
+.blog p {
+  padding: 0 1rem 1rem 1rem;
+}
+.features {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+.likes {
+  display: flex;
+  /* align-items: center; */
+}
+.likes img {
+  height: 1.5rem;
+  cursor: pointer;
+}
+ .likes img:hover {
+  background-color:#334155;
+  border-radius: 5rem;
+} 
+.likesCounts {
+  background:red;
+}
+.likesCounts:hover {
+  cursor: pointer
+}
+.blog button {
+  border: none;
+  padding: 0.85rem 2rem;
+  border-radius: 0.5rem;
+  color: white;
+  background-color: rgb(130, 68, 255, 30);
+  margin: 1rem;
+  margin-left: 6.5vw;
+}
+.blog button:hover{
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .blogs {
+  padding: 2rem 4.5rem;
+  display: flex;
+  justify-content:center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.blog {
+  border: 1px solid rgb(255, 255, 255, 0.5);
+  z-index:-10;
+  border-radius: 1rem;
+  width: 380px;
+  overflow: hidden;
+  position: relative;
+}
+}
