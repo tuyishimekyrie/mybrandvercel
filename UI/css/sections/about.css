@@ -21,4 +21,24 @@
   .platforms {
     margin-top: 80vh;
   }
+  .heading {
+    font-size: 1rem;
+  text-align: start;
+  padding: 2rem 4rem;
+}
+}
+@media only screen and (max-width: 486px) {
+  .heading {
+    font-size: .85rem;
+     padding: 2rem 2rem;
+  }
+  .about .about-content p {
+    display: flex;
+    flex-direction: column;
+    width: 85.5vw;
+    padding: 0;
+  }
+  .platforms {
+    margin-top: 160vh;
+  }
 }
